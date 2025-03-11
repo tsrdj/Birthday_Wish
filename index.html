@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 A Birthday Surprise Just for You! 🎂</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+        h1 {
+            font-size: 2.2em;
+        }
+        p {
+            font-size: 1.2em;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+        .emoji {
+            font-size: 2.5em;
+            margin: 15px 0;
+            animation: bounce 1.5s infinite;
+        }
+        .button {
+            background: #fff;
+            color: #ff4081;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="slide1" class="container">
+        <h1>🎉 Happy Birthday, Nikita! 🎂</h1>
+        <p class="emoji">🥳🎈🎁</p>
+        <p>Today is all about you, the kind, wonderful, and incredible person you are. You light up the lives of so many people around you, and today is the perfect day to celebrate the happiness you bring. May your day be filled with joy, laughter, and every little thing that makes you smile. You deserve all the love, blessings, and success in the world because you are truly one of a kind. I hope this little surprise makes your day even brighter.</p>
+        <button class="button" onclick="nextSlide(1)">Next ➡️</button>
+    </div>
+
+    <div id="slide2" class="container">
+        <h1>💖 You Are Truly Special! 💖</h1>
+        <p>You have a heart so big and pure that everyone who knows you feels lucky. You make people feel comfortable, valued, and happy just by being yourself. There are very few people in the world who have that magic. On your birthday, I just want to remind you how amazing you are, and I hope you never forget it. Keep being the wonderful, kind, and strong person you are. The world is better because you are in it.</p>
+        <p class="emoji">🌟💙💐</p>
+        <button class="button" onclick="nextSlide(2)">Next ➡️</button>
+    </div>
+
+    <div id="slide3" class="container">
+        <h1>🎁 A Wish Just for You! 🎊</h1>
+        <p>On this special day, I wish you endless happiness, unlimited success, and everything your heart desires. May your dreams come true, and may this year bring you new adventures, laughter, and so many unforgettable moments. You are such a bright, positive, and hardworking person, and you deserve only the best things in life. If anyone can achieve greatness, it's you. Keep going, keep shining, and keep making the world a better place just by being in it.</p>
+        <p class="emoji">🎂🎁✨</p>
+        <button class="button" onclick="nextSlide(3)">Next ➡️</button>
+    </div>
+
+    <div id="slide4" class="container">
+        <h1>🎈 Your Energy is Beautiful! 🎈</h1>
+        <p>The way you spread positivity and light up every room you walk into is something truly special. You make life brighter, and your energy is so warm and comforting. I hope today, on your birthday, you feel all the love and appreciation you bring to others every single day. Enjoy every second, laugh as much as you can, and make beautiful memories. You deserve a day as wonderful as you.</p>
+        <p class="emoji">😄💫💐</p>
+        <button class="button" onclick="nextSlide(4)">Next ➡️</button>
+    </div>
+
+    <div id="slide5" class="container">
+        <h1>💫 Keep Being Amazing! 💫</h1>
+        <p>Life has so much to offer, and I know you’re going to do incredible things. You are already someone so unique and inspiring, and the future holds even more success and happiness for you. Always believe in yourself, because you are capable of achieving anything you set your mind to. You inspire people more than you realize. Keep shining, keep growing, and most importantly—keep being you.</p>
+        <p class="emoji">🚀🌍💡</p>
+        <button class="button" onclick="nextSlide(5)">Next ➡️</button>
+    </div>
+
+    <div id="slide6" class="container">
+        <h1>🎊 Cheers to You! 🎊</h1>
+        <p>Birthdays are a reminder of how far you’ve come and how much you’ve achieved. And trust me, you’ve done so many incredible things already. But this is just the beginning. This year will bring you even more joy, growth, and success. So take a deep breath, smile, and step into this new chapter of your life with confidence and excitement. You are amazing, and the world is lucky to have you.</p>
+        <p class="emoji">🥂🌟🎂</p>
+        <button class="button" onclick="nextSlide(6)">Next ➡️</button>
+    </div>
+
+    <div id="slide7" class="container">
+        <h1>✨ Made with Love! ✨</h1>
+        <p>This little surprise was created just for you by me who truly appreciates and admires the person you are. I hope this made you smile and made your birthday a little more special. Wishing you a year filled with happiness, success, and all the beautiful things life has to offer. Stay Prasanna always.</p>
+        <p>— Prasanna 😊</p>
+        <p class="emoji">🎈💖🌟</p>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        function nextSlide(slideIndex) {
+            document.getElementById("slide" + slideIndex).style.display = "none";
+            document.getElementById("slide" + (slideIndex + 1)).style.display = "block";
+            document.getElementById("slide" + (slideIndex + 1)).style.opacity = "1";
+            document.getElementById("slide" + (slideIndex + 1)).style.transform = "translateY(0)";
+        }
+        window.onload = function() {
+            document.getElementById("slide1").style.display = "block";
+            document.getElementById("slide1").style.opacity = "1";
+            document.getElementById("slide1").style.transform = "translateY(0)";
+        }
+    </script>
+
+</body>
+</html>
